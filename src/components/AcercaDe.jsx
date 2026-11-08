@@ -1,37 +1,50 @@
 import React from "react";
 
 const AcercaDe = () => {
-  const version = "1.0.3";
-  const fechaActualizacion = "26 de junio de 2025";
-
   return (
     <div style={styles.container}>
-      <h2 style={styles.titulo}>Información de la Aplicación</h2>
+      <div style={styles.icono}>🔒</div>
 
-      <div style={styles.section}>
-        <p><strong>Nombre:</strong> Lilith</p>
-        <p><strong>Versión:</strong> {version}</p>
-        <p><strong>Última actualización:</strong> {fechaActualizacion}</p>
+      <h1 style={styles.titulo}>Período de prueba finalizado</h1>
+
+      <p style={styles.texto}>
+        El período de prueba de esta aplicación ha concluido.
+      </p>
+
+      <p style={styles.texto}>
+        Para continuar utilizando todas las funciones, es necesario activar
+        una licencia.
+      </p>
+
+      <div style={styles.caja}>
+        <h3 style={styles.subtitulo}>Solicitar licencia</h3>
+
+        <p>
+          Si desea adquirir una licencia o necesita renovar la existente,
+          comuníquese con el desarrollador.
+        </p>
+
+        <div style={styles.contacto}>
+          <p>
+            <strong>Desarrollador:</strong> JoyBoy
+          </p>
+          <p>
+            <strong>WhatsApp:</strong> 231 159 1893
+          </p>
+          <p>
+            <strong>Ubicación:</strong> Chignautla, Puebla
+          </p>
+        </div>
       </div>
 
-      <div style={styles.section}>
-        <p><strong>Desarrollador:</strong> JoyBoy</p>
-        <p><strong>Contacto:</strong> WhatsApp 231 159 1893</p>
-        <p><strong>Ubicación:</strong> Chignautla pue.</p>
+      <div style={styles.aviso}>
+        Una vez adquirida la licencia, la aplicación será activada para seguir
+        utilizándola con normalidad.
       </div>
 
-      <div style={styles.section}>
-        <p><strong>Tecnologías utilizadas:</strong></p>
-        <ul style={styles.lista}>
-          <li>React.js</li>
-          <li>Dexie.js (IndexedDB)</li>
-          <li>React Router</li>
-          <li>CSS personalizado</li>
-        </ul>
-      </div>
-
-      <div style={styles.pie}>
-        <p>© {new Date().getFullYear()} JoyVolt Corporation. Todos los derechos reservados.</p>
+      <div style={styles.footer}>
+        © {new Date().getFullYear()} JoyVolt Corporation. Todos los derechos
+        reservados.
       </div>
     </div>
   );
@@ -40,35 +53,70 @@ const AcercaDe = () => {
 const styles = {
   container: {
     maxWidth: 500,
-    margin: "0 auto",
-    padding: "24px",
-    backgroundColor: "#f9f9f9",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-    fontFamily: "sans-serif",
-    color: "#333",
+    margin: "40px auto",
+    padding: 30,
+    background: "#fff",
+    borderRadius: 15,
+    boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+    textAlign: "center",
+    fontFamily: "Arial, sans-serif",
+  },
+
+  icono: {
+    fontSize: 60,
+    marginBottom: 15,
+  },
+
+  titulo: {
+    color: "#d32f2f",
+    marginBottom: 20,
+  },
+
+  texto: {
+    fontSize: 17,
+    color: "#444",
+    marginBottom: 15,
     lineHeight: 1.6,
   },
-  titulo: {
-    fontSize: "1.5rem",
-    marginBottom: "16px",
-    borderBottom: "2px solid #1976d2",
-    paddingBottom: "8px",
+
+  caja: {
+    marginTop: 25,
+    padding: 20,
+    background: "#000000",
+    borderRadius: 10,
+    border: "1px solid #ddd",
+    textAlign: "left",
+  },
+
+  subtitulo: {
+    marginTop: 0,
     color: "#1976d2",
-  },
-  section: {
-    marginBottom: "20px",
-  },
-  lista: {
-    paddingLeft: "20px",
-    marginTop: "6px",
-  },
-  pie: {
-    fontSize: "0.85rem",
-    color: "#777",
-    marginTop: "32px",
-    borderTop: "1px solid #ddd",
-    paddingTop: "12px",
     textAlign: "center",
+  },
+
+  contacto: {
+    marginTop: 15,
+    lineHeight: 1.8,
+    fontSize: 16,
+  },
+
+  aviso: {
+    marginTop: 25,
+    padding: 15,
+    background: "#fff3cd",
+    color: "#856404",
+    border: "1px solid #ffeeba",
+    borderRadius: 8,
+    fontWeight: "bold",
+    lineHeight: 1.5,
+  },
+
+  footer: {
+    marginTop: 30,
+    fontSize: 13,
+    color: "#777",
+    borderTop: "1px solid #ddd",
+    paddingTop: 15,
   },
 };
 

@@ -1,20 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import "./Navbar.css";
 import {
-  faClock,
-  faDollarSign,
   faInfoCircle,
-  faReceipt,
-  faTableList,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navigationItems = [
-  { path: '/', icon: faClock, label: 'Tiempos' },
-  { path: '/datos', icon: faTableList, label: 'Datos' },
-  { path: '/reporte', icon: faReceipt, label: 'Reporte' },
-  { path: '/comision', icon: faDollarSign, label: 'Comisión' },
-  { path: '/acerca', icon: faInfoCircle, label: 'Acerca' },
+  { path: '/', icon: faInfoCircle, label: 'Acerca' },
 ];
 
 function Navbar() {
